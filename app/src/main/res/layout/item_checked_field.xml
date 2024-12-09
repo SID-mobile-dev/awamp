@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.android.awamp.view.main.NotClickableTextInputLayout
+        android:id="@+id/checked_field_text_input"
+        style="@style/Theme.Komaric.TextInput.OutLined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        app:errorEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/checked_field_checkbox_title_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:hint="Flexor dig.lor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/initial_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusableInTouchMode="false"
+            android:inputType="none"
+            android:textAppearance="@style/Theme.Komaric.Text14" />
+
+    </com.android.awamp.view.main.NotClickableTextInputLayout>
+
+    <TextView
+        android:id="@+id/checked_field_checkbox_title_left"
+        style="@style/Theme.Komaric.Text.Header10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/left"
+        app:layout_constraintBottom_toTopOf="@id/checked_field_checkbox_left"
+        app:layout_constraintEnd_toStartOf="@id/checked_field_checkbox_title_right"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/checked_field_checkbox_title_right"
+        style="@style/Theme.Komaric.Text.Header10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/right"
+        app:layout_constraintBottom_toTopOf="@id/checked_field_checkbox_right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <CheckBox
+        android:id="@+id/checked_field_checkbox_left"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:background="@android:color/transparent"
+        android:clickable="false"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/checked_field_checkbox_title_left"
+        app:layout_constraintStart_toStartOf="@id/checked_field_checkbox_title_left"
+        app:layout_constraintTop_toBottomOf="@id/checked_field_checkbox_title_left" />
+
+    <CheckBox
+        android:id="@+id/checked_field_checkbox_right"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:background="@android:color/transparent"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/checked_field_checkbox_title_right"
+        app:layout_constraintStart_toStartOf="@id/checked_field_checkbox_title_right"
+        app:layout_constraintTop_toBottomOf="@id/checked_field_checkbox_title_right"
+        tools:checked="true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

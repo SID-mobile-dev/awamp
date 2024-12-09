@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/initialFragment">
+
+    <fragment
+        android:id="@+id/initialFragment"
+        android:name="com.android.awamp.view.initial.InitialFragment"
+        android:label="InitialFragment">
+        <action
+            android:id="@+id/action_initialFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.android.awamp.view.main.MainFragment"
+        android:label="MainFragment">
+        <action
+            android:id="@+id/action_mainFragment_to_chooseSideFragment"
+            app:destination="@id/chooseSideFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chooseSideFragment"
+        android:name="com.android.awamp.view.sideChoose.ChooseSideFragment"
+        android:label="ChooseSideFragment">
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_chooseSideFragment_to_inputFragment"
+            app:destination="@id/inputFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inputFragment"
+        android:name="com.android.awamp.view.input.InputFragment"
+        android:label="InputFragment">
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="side"
+            app:argType="com.android.awamp.domain.Side" />
+        <action
+            android:id="@+id/action_inputFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.android.awamp.view.result.ResultFragment"
+        android:label="ResultFragment" />
+
+</navigation>

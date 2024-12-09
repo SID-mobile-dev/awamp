@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">AVAMP</string>
+    <string name="weight">Вес</string>
+    <string name="invalid_data_text">Некорректные данные</string>
+    <string name="btn_continue">Продолжить</string>
+    <string name="btn_save">Сохранить</string>
+    <string name="weight_suffix">кг</string>
+    <string name="units_from_weight">ед / кг</string>
+    <string name="units">ед</string>
+    <string name="btn_result">Вывести результаты</string>
+    <string name="initial_screen_title">Введите вес</string>
+    <string name="main_screen_title">Заполните форму</string>
+    <string name="side">Сторона</string>
+    <string name="left">Левая</string>
+    <string name="right">Правая</string>
+    <string name="choose_side_screen_title">Выберите сторону</string>
+    <string name="input_screen_title">Введите значение</string>
+    <string name="btn_next">Далее</string>
+    <string name="dose_range">Диапазон дозировки</string>
+    <string name="max_range">Максимальная дозировка</string>
+    <string name="input_dose">Введите дозировку</string>
+    <string name="input_incorrect">Введенное значение некорректно</string>
+    <string name="input_incorrect_too_low">Доза меньше требуемой</string>
+    <string name="input_incorrect_too_big">Доза больше требуемой</string>
+    <string name="upper_limbs_title">Верхние конечности</string>
+    <string name="lower_limbs_title">Нижние конечности</string>
+    <string name="current_dose">Текущая доза</string>
+    <string name="maximum_dose">Максимальная доза</string>
+    <string name="exceeded_maximum_dose">Превышена максимальная доза</string>
+    <string name="result_title">Результаты</string>
+    <string name="position">Позиция</string>
+    <string name="name">Название</string>
+    <string name="dose">Доза</string>
+
+</resources>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/input_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_left"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="@string/input_screen_title"
+        app:titleTextAppearance="@style/Theme.Komaric.Text.Toolbar" />
+
+    <com.android.awamp.view.main.NotClickableTextInputLayout
+        android:id="@+id/input_side"
+        style="@style/Theme.Komaric.TextInput.OutLined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/side"
+        app:errorEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_toolbar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/initial_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusableInTouchMode="false"
+            android:inputType="none"
+            android:textAppearance="@style/Theme.Komaric.Text14"
+            tools:text="Левая" />
+
+    </com.android.awamp.view.main.NotClickableTextInputLayout>
+
+    <com.android.awamp.view.main.NotClickableTextInputLayout
+        android:id="@+id/input_interval"
+        style="@style/Theme.Komaric.TextInput.OutLined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/dose_range"
+        app:errorEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_side"
+        app:suffixText="@string/units_from_weight">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_interval_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusableInTouchMode="false"
+            android:inputType="none"
+            android:textAppearance="@style/Theme.Komaric.Text14"
+            tools:text="0.15 - 0.75" />
+
+    </com.android.awamp.view.main.NotClickableTextInputLayout>
+
+    <com.android.awamp.view.main.NotClickableTextInputLayout
+        android:id="@+id/input_max_dose"
+        style="@style/Theme.Komaric.TextInput.OutLined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/max_range"
+        app:errorEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_interval"
+        app:suffixText="@string/units">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_max_dose_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusableInTouchMode="false"
+            android:inputType="none"
+            android:textAppearance="@style/Theme.Komaric.Text14" />
+
+    </com.android.awamp.view.main.NotClickableTextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_field"
+        style="@style/Theme.Komaric.TextInput.OutLined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/input_dose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_max_dose"
+        app:suffixText="@string/units">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_field_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:textAppearance="@style/Theme.Komaric.Text14" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/input_save"
+        style="@style/Theme.Komaric.Button"
+        android:layout_width="0dp"
+        android:text="@string/btn_save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

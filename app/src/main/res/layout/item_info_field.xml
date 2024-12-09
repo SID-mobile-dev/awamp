@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.awamp.view.main.NotClickableTextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/info_field_text_input"
+    style="@style/Theme.Komaric.TextInput.OutLined"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    tools:hint="info">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/info_field_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusableInTouchMode="false"
+        android:inputType="none"
+        android:textAppearance="@style/Theme.Komaric.Text14"
+        tools:text="Инфо" />
+
+</com.android.awamp.view.main.NotClickableTextInputLayout>
