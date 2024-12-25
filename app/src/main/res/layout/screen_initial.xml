@@ -32,12 +32,11 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/initial_edit_text"
+            style="@style/Theme.Komaric.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:imeOptions="actionDone"
-            android:inputType="numberDecimal"
-            android:textAppearance="@style/Theme.Komaric.Text14" />
-
+            android:inputType="numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
