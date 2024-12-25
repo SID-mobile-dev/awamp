@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-
+    <color name="surface">#fdfdfd</color>
     <color name="error">#EF5350</color>
     <color name="primary">#6495ED</color>
+    <color name="primary_dark">#1c2a43</color>
+    <color name="text_disabled">#1d2036</color>
+    <color name="text_enabled">#e4e4e4</color>
+    <color name="accent">#edbc64</color>
     <color name="primary_with_alpha">#0F6495ED</color>
     <color name="font">#040720</color>
     <color name="primary_light">#E0EAFB</color>

@@ -33,6 +33,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/initial_edit_text"
+            style="@style/Theme.Komaric.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="false"
@@ -61,6 +62,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/input_interval_edit_text"
+            style="@style/Theme.Komaric.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="false"
@@ -89,6 +91,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/input_max_dose_edit_text"
+            style="@style/Theme.Komaric.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="false"
@@ -115,6 +118,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/input_field_edit_text"
+            style="@style/Theme.Komaric.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:imeOptions="actionDone"
