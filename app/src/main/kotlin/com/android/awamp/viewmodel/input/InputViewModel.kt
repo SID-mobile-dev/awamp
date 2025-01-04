@@ -30,7 +30,6 @@ class InputViewModel(
         InputUiState(
             toolbarTitle = args.name,
             sideText = getSideText(args.side),
-            interval = "",
             minDose = 0.0f,
             maxDose = 0.0f,
             dose = null,
@@ -49,7 +48,6 @@ class InputViewModel(
                     _state.value = InputUiState(
                         toolbarTitle = field.name,
                         sideText = getSideText(field.side),
-                        interval = "${field.intervalStart} — ${field.intervalEnd}",
                         minDose = (weight * field.intervalStart * 100).toInt().toFloat() / 100,
                         maxDose = (weight * field.intervalEnd * 100).toInt().toFloat() / 100,
                         dose = field.dose,

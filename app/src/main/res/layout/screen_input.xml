@@ -46,14 +46,14 @@
     </com.android.awamp.view.main.NotClickableTextInputLayout>
 
     <com.android.awamp.view.main.NotClickableTextInputLayout
-        android:id="@+id/input_interval"
+        android:id="@+id/input_min_dose"
         style="@style/Theme.Komaric.TextInput.OutLined"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:hint="@string/dose_range"
+        android:hint="@string/min_range"
         app:errorEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,7 @@
         app:suffixText="@string/units_from_weight">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/input_interval_edit_text"
+            android:id="@+id/input_min_dose_edit_text"
             style="@style/Theme.Komaric.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
         app:errorEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/input_interval"
+        app:layout_constraintTop_toBottomOf="@id/input_min_dose"
         app:suffixText="@string/units">
 
         <com.google.android.material.textfield.TextInputEditText
