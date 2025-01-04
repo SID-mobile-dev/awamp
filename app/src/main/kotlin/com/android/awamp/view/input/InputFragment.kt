@@ -48,7 +48,7 @@ class InputFragment : BaseFragment(R.layout.screen_input) {
                 binding.inputFieldEditText.setText(state.dose.toString())
             }
             binding.inputMaxDoseEditText.setText("%.2f".format(state.maxDose))
-            binding.inputIntervalEditText.setText(state.interval)
+            binding.inputMinDoseEditText.setText("%.2f".format(state.minDose))
         }
 
         viewModel.errorLiveData.observe(viewLifecycleOwner) { error ->
@@ -59,7 +59,8 @@ class InputFragment : BaseFragment(R.layout.screen_input) {
                     null
                 }
                 inputSave.isEnabled = inputFieldEditText.text?.length != null &&
-                    inputFieldEditText.text?.length != 0 && !error.hasError
+                        inputFieldEditText.text?.length != 0 &&
+                        inputFieldEditText.text.toString().toDoubleOrNull() != 0.0
             }
         }
     }

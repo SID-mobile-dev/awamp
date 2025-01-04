@@ -43,12 +43,10 @@ class MainViewModel(
             interactor.getFields().map { list ->
                 createRows(list.groupBy { it.name })
             }.collect { rows ->
-                val weight = preferenceStorage.getValue(SpKeys.WEIGHT_KEY, 0f)
                 val currentDose = preferenceStorage.getValue(SpKeys.CURRENT_DOSE, 0f)
-                val maxDose = min(MAX_DOSE_MULTIPLIER * weight, MAX_DOSE)
                 _state.value = MainUiState(
                     rows = rows,
-                    isActionEnabled = currentDose != 0f && currentDose <= maxDose,
+                    isActionEnabled = currentDose != 0f,
                 )
             }
         }

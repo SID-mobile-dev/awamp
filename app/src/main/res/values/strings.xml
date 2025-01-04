@@ -16,7 +16,7 @@
     <string name="choose_side_screen_title">Выберите сторону</string>
     <string name="input_screen_title">Введите значение</string>
     <string name="btn_next">Далее</string>
-    <string name="dose_range">Диапазон дозировки</string>
+    <string name="min_range">Минимальная дозировка</string>
     <string name="max_range">Максимальная дозировка</string>
     <string name="input_dose">Введите дозировку</string>
     <string name="input_incorrect">Введенное значение некорректно</string>
