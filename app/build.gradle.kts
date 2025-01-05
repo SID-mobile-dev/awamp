@@ -45,6 +45,10 @@ android {
     sourceSets.all {
         java.srcDir("src/$name/kotlin")
     }
+
+    ksp {
+        arg("room.schemaLocation", "$projectDir/schemas")
+    }
 }
 
 dependencies {

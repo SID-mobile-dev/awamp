@@ -5,8 +5,10 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Transaction
 import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flowOf
 
 @Dao
 interface FieldDao {
@@ -31,4 +33,16 @@ interface FieldDao {
 
     @Delete
     fun delete(fieldData: FieldData)
+
+    @Query("SELECT * FROM field WHERE name LIKE :name AND side LIKE :side")
+    fun get(name: String, side: String): FieldData
+
+    @Transaction
+    fun refresh(fieldData: List<FieldData>) {
+        deleteAll()
+        insertAll(fieldData)
+    }
+
+    @Query("DELETE FROM field")
+    fun deleteAll()
 }

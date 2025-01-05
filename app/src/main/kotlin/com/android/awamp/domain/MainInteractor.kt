@@ -30,9 +30,7 @@ class MainInteractor(private val dao: FieldDao) {
 
     suspend fun setFields() {
         withContext(Dispatchers.IO) {
-            fieldList.forEach {
-                setField(it)
-            }
+            dao.refresh(fieldList.map(::map))
         }
     }
 
@@ -258,14 +256,28 @@ class MainInteractor(private val dao: FieldDao) {
             intervalEnd = 0.5f,
         ),
         Field(
-            name = "gastrocnemius",
+            name = "gastrocnemius med.",
             side = Side.LEFT,
             bodyPart = BodyPart.BOTTOM,
             intervalStart = 0.75f,
             intervalEnd = 6.0f,
         ),
         Field(
-            name = "gastrocnemius",
+            name = "gastrocnemius med.",
+            side = Side.RIGHT,
+            bodyPart = BodyPart.BOTTOM,
+            intervalStart = 0.75f,
+            intervalEnd = 6.0f,
+        ),
+        Field(
+            name = "gastrocnemius lat.",
+            side = Side.LEFT,
+            bodyPart = BodyPart.BOTTOM,
+            intervalStart = 0.75f,
+            intervalEnd = 6.0f,
+        ),
+        Field(
+            name = "gastrocnemius lat.",
             side = Side.RIGHT,
             bodyPart = BodyPart.BOTTOM,
             intervalStart = 0.75f,
